@@ -1,9 +1,9 @@
 class Vehiculo {
-    private String matricula;
+    private String placa;
     private int velocidad;
 
-    public Vehiculo(String matricula) {
-        this.matricula = matricula;
+    public Vehiculo(String placa) {
+        this.placa = placa;
         this.velocidad = 0;
     }
 
@@ -11,8 +11,8 @@ class Vehiculo {
         this.velocidad += incremento;
     }
 
-    public String getMatricula() {
-        return matricula;
+    public String getplaca() {
+        return placa;
     }
 
     public int getVelocidad() {
@@ -21,15 +21,15 @@ class Vehiculo {
 
     @Override
     public String toString() {
-        return "Matricula: " + matricula + ", Velocidad: " + velocidad + " km/h";
+        return "placa: " + placa + ", Velocidad: " + velocidad + " km/h";
     }
 }
 
 class Coche extends Vehiculo {
     private int numeroPuertas;
 
-    public Coche(String matricula, int numeroPuertas) {
-        super(matricula);
+    public Coche(String placa, int numeroPuertas) {
+        super(placa);
         this.numeroPuertas = numeroPuertas;
     }
 
@@ -46,8 +46,8 @@ class Coche extends Vehiculo {
 class Camion extends Vehiculo {
     private Remolque remolque;
 
-    public Camion(String matricula) {
-        super(matricula);
+    public Camion(String placa) {
+        super(placa);
         this.remolque = null;
     }
 
