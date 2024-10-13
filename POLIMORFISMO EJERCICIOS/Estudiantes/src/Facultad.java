@@ -1,4 +1,3 @@
-// Clase base Persona
 class Persona {
     private String nombre;
     private String apellidos;
