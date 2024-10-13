@@ -3,14 +3,14 @@ import java.util.ArrayList;
 class Empleado {
     protected String nombre;
     protected String apellidos;
-    protected String cedula;
+    protected int cedula;
     protected String direccion;
     protected int antiguedad;
     protected String telefono;
     protected double salario;
     protected Empleado supervisor;
 
-    public Empleado(String nombre, String apellidos, String cedula, String direccion, int antiguedad, String telefono, double salario, Empleado supervisor) {
+    public Empleado(String nombre, String apellidos, int cedula, String direccion, int antiguedad, String telefono, double salario, Empleado supervisor) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.cedula = cedula;
@@ -50,7 +50,7 @@ class Secretario extends Empleado {
     private String despacho;
     private String numeroFax;
 
-    public Secretario(String nombre, String apellidos, String cedula, String direccion, int antiguedad, String telefono, double salario, Empleado supervisor, String despacho, String numeroFax) {
+    public Secretario(String nombre, String apellidos, int cedula, String direccion, int antiguedad, String telefono, double salario, Empleado supervisor, String despacho, String numeroFax) {
         super(nombre, apellidos, cedula, direccion, antiguedad, telefono, salario, supervisor);
         this.despacho = despacho;
         this.numeroFax = numeroFax;
@@ -78,7 +78,7 @@ class Vendedor extends Empleado {
     private ArrayList<String> listaClientes;
     private double porcentajeComision;
 
-    public Vendedor(String nombre, String apellidos, String cedula, String direccion, int antiguedad, String telefono, double salario, Empleado supervisor, String placa, String marca, String modelo, String telefonoMovil, String areaVenta, double porcentajeComision) {
+    public Vendedor(String nombre, String apellidos, int cedula, String direccion, int antiguedad, String telefono, double salario, Empleado supervisor, String placa, String marca, String modelo, String telefonoMovil, String areaVenta, double porcentajeComision) {
         super(nombre, apellidos, cedula, direccion, antiguedad, telefono, salario, supervisor);
         this.placa = placa;
         this.marca = marca;
@@ -131,7 +131,7 @@ class JefeDeZona extends Empleado {
     private Secretario secretario;
     private ArrayList<Vendedor> vendedores;
 
-    public JefeDeZona(String nombre, String apellidos, String cedula, String direccion, int antiguedad, String telefono, double salario, Empleado supervisor, String despacho, String coche, Secretario secretario) {
+    public JefeDeZona(String nombre, String apellidos, int cedula, String direccion, int antiguedad, String telefono, double salario, Empleado supervisor, String despacho, String coche, Secretario secretario) {
         super(nombre, apellidos, cedula, direccion, antiguedad, telefono, salario, supervisor);
         this.despacho = despacho;
         this.coche = coche;
@@ -182,13 +182,13 @@ class JefeDeZona extends Empleado {
 
 public class Workers {
     public static void main(String[] args) {
-        Empleado supervisor = new Empleado("Mauricio", "Tuniz", "8741566841", "San Francisco de Estero cll 17 78-10", 10, "3209548732", 50000, null);
-        Secretario secretario = new Secretario("Paul", "Johnson", "8765321245", "Calle Pilares manzana 789", 7, "3659897426", 25000, supervisor, "Despacho 1", "1234");
+        Empleado supervisor = new Empleado("Mauricio", "Tuniz", 87415668, "San Francisco de Estero cll 17 78-10", 10, "3209548732", 50000, null);
+        Secretario secretario = new Secretario("Paul", "Johnson", 87653212, "Calle Pilares manzana 789", 7, "3659897426", 25000, supervisor, "Despacho 1", "1234");
 
-        Vendedor vendedor1 = new Vendedor("San Cristobal", "Colon", "8765432142", "Calle moldavia manzana 456", 5, "3942503168", 30000, supervisor, "1234-ABC", "Toyota", "Corolla", "3942503168", "Norte", 10);
-        Vendedor vendedor2 = new Vendedor("Milica", "Williams", "19283746", "Polaris 15 manzana 789", 3, "31862045890", 28000, supervisor, "5678-DEF", "Honda", "Civic", "31862045890", "Sur", 8);
+        Vendedor vendedor1 = new Vendedor("San Cristobal", "Colon", 87654321, "Calle moldavia manzana 456", 5, "3942503168", 30000, supervisor, "1234-ABC", "Toyota", "Corolla", "3942503168", "Norte", 10);
+        Vendedor vendedor2 = new Vendedor("Milica", "Williams", 19283746, "Polaris 15 manzana 789", 3, "31862045890", 28000, supervisor, "5678-DEF", "Honda", "Civic", "31862045890", "Sur", 8);
 
-        JefeDeZona jefe = new JefeDeZona("Alice", "Muñoz", "192837465", "Mauritania solar Calle  987", 15, "3205689452", 70000, supervisor, "Despacho 2", "Tesla Model S", secretario);
+        JefeDeZona jefe = new JefeDeZona("Alice", "Muñoz", 1928374, "Mauritania solar Calle  987", 15, "3205689452", 70000, supervisor, "Despacho 2", "Tesla Model S", secretario);
 
         System.out.println("Dar de alta un nuevo cliente.");
         System.out.println();
@@ -246,7 +246,7 @@ public class Workers {
         jefe.darBajaVendedor(vendedor2);
         System.out.println();
 
-        Secretario nuevoSecretario = new Secretario("Sofia", "Silva", "887947879", "Maridiaz 34 calle 10 78 manzana 89", 0, "3452017654", 25000, supervisor, "Despacho 1", "3654");
+        Secretario nuevoSecretario = new Secretario("Sofia", "Silva", 887947879, "Maridiaz 34 calle 10 78 manzana 89", 0, "3452017654", 25000, supervisor, "Despacho 1", "3654");
 
         System.out.println("Cambiar Secretario.");
         jefe.cambiarSecretario(nuevoSecretario);
