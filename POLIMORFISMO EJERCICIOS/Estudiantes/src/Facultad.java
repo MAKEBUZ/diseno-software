@@ -2,7 +2,7 @@
 class Persona {
     private String nombre;
     private String apellidos;
-    private String id;
+    private int id;
     private String estadoCivil;
 
     public Persona(String nombre, String apellidos, String id, String estadoCivil) {
