@@ -5,7 +5,7 @@ class Persona {
     private int id;
     private String estadoCivil;
 
-    public Persona(String nombre, String apellidos, String id, String estadoCivil) {
+    public Persona(String nombre, String apellidos, int id, String estadoCivil) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.id = id;
@@ -26,7 +26,7 @@ class Empleado extends Persona {
     private int yearIncorporacion;
     private int despacho;
 
-    public Empleado(String nombre, String apellidos, String id, String estadoCivil, int yearIncorporacion, int despacho) {
+    public Empleado(String nombre, String apellidos, int id, String estadoCivil, int yearIncorporacion, int despacho) {
         super(nombre, apellidos, id, estadoCivil);
         this.yearIncorporacion = yearIncorporacion;
         this.despacho = despacho;
@@ -45,7 +45,7 @@ class Empleado extends Persona {
 class Estudiante extends Persona {
     private int curso;
 
-    public Estudiante(String nombre, String apellidos, String id, String estadoCivil, int curso) {
+    public Estudiante(String nombre, String apellidos, int id, String estadoCivil, int curso) {
         super(nombre, apellidos, id, estadoCivil);
         this.curso = curso;
     }
@@ -63,7 +63,7 @@ class Estudiante extends Persona {
 class Profesor extends Empleado {
     private String departamento;
 
-    public Profesor(String nombre, String apellidos, String id, String estadoCivil, int yearIncorporacion, int despacho, String departamento) {
+    public Profesor(String nombre, String apellidos, int id, String estadoCivil, int yearIncorporacion, int despacho, String departamento) {
         super(nombre, apellidos, id, estadoCivil, yearIncorporacion, despacho);
         this.departamento = departamento;
     }
@@ -81,7 +81,7 @@ class Profesor extends Empleado {
 class PersonalDeServicio extends Empleado {
     private String seccion;
 
-    public PersonalDeServicio(String nombre, String apellidos, String id, String estadoCivil, int yearIncorporacion, int despacho, String seccion) {
+    public PersonalDeServicio(String nombre, String apellidos, int id, String estadoCivil, int yearIncorporacion, int despacho, String seccion) {
         super(nombre, apellidos, id, estadoCivil, yearIncorporacion, despacho);
         this.seccion = seccion;
     }
