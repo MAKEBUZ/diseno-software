@@ -183,7 +183,7 @@ class JefeDeZona extends Empleado {
 public class Workers {
     public static void main(String[] args) {
         Empleado supervisor = new Empleado("Mauricio", "Tuniz", 87415668, "San Francisco de Estero cll 17 78-10", 10, "3209548732", 50000, null);
-        Secretario secretario = new Secretario("Paul", "Johnson", 87653212, "Calle Pilares manzana 789", 7, "3659897426", 25000, supervisor, "Despacho 1", "1234");
+        Secretario secretario = new Secretario("Paul", "Johnson", 87653212, "Calle Pilares manzana 789", 7, "3659897426", 25000, supervisor, "Despacho 1", "1234-61");
 
         Vendedor vendedor1 = new Vendedor("San Cristobal", "Colon", 87654321, "Calle moldavia manzana 456", 5, "3942503168", 30000, supervisor, "1234-ABC", "Toyota", "Corolla", "3942503168", "Norte", 10);
         Vendedor vendedor2 = new Vendedor("Milica", "Williams", 19283746, "Polaris 15 manzana 789", 3, "31862045890", 28000, supervisor, "5678-DEF", "Honda", "Civic", "31862045890", "Sur", 8);
@@ -246,7 +246,7 @@ public class Workers {
         jefe.darBajaVendedor(vendedor2);
         System.out.println();
 
-        Secretario nuevoSecretario = new Secretario("Sofia", "Silva", 887947879, "Maridiaz 34 calle 10 78 manzana 89", 0, "3452017654", 25000, supervisor, "Despacho 1", "3654");
+        Secretario nuevoSecretario = new Secretario("Sofia", "Silva", 887947879, "Maridiaz 34 calle 10 78 manzana 89", 0, "3452017654", 25000, supervisor, "Despacho 1", "3654-90");
 
         System.out.println("Cambiar Secretario.");
         jefe.cambiarSecretario(nuevoSecretario);
