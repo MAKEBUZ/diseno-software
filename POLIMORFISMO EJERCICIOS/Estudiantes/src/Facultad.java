@@ -1,3 +1,4 @@
+// Clase base Persona
 class Persona {
     private String nombre;
     private String apellidos;
@@ -98,9 +99,9 @@ class PersonalDeServicio extends Empleado {
 public class Facultad {
     public static void main(String[] args) {
 
-        Estudiante estudiante = new Estudiante("Miguel", "Rualez", "7262788", "Soltero", 2);
-        Profesor profesor = new Profesor("Ana", "Victoria Yepes", "88945612389", "Casada", 2018, 101, "Matematicas");
-        PersonalDeServicio personal = new PersonalDeServicio("Luis", "Diaz", "50736745", "Divorciado", 2020, 202, "Biblioteca");
+        Estudiante estudiante = new Estudiante("Miguel", "Rualez", 7262788, "Soltero", 2);
+        Profesor profesor = new Profesor("Ana", "Victoria Yepes", 889456123, "Casada", 2018, 101, "Matematicas");
+        PersonalDeServicio personal = new PersonalDeServicio("Luis", "Diaz", 50736745, "Divorciado", 2020, 202, "Biblioteca");
 
         System.out.println("Información inicial:");
         System.out.println(estudiante);
